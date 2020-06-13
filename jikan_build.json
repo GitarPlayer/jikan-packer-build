@@ -1,0 +1,18 @@
+{
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "lipo-energy",
+            "source_image_family": "ubuntu-minimal-1910",
+            "ssh_username": "packer",
+            "zone": "us-central1-a",
+            "image_name": "jikan"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "jikan.sh"
+        }
+    ]
+}
